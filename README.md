@@ -26,7 +26,7 @@ En suivant le tutoriel, nous avons ajouté dans la config UFW la liste des ports
 
 ![Port acceptés](https://user-images.githubusercontent.com/62909821/134677342-30257d34-ed56-47ed-a219-44fc43581bb3.PNG)
 
-![UFW add ports](Readme_Images/security_port.jpg)
+![UFW add ports](Readme_images/security_port.jpg)
 
 ## Adapt SSH config
 
@@ -34,11 +34,11 @@ En suivant le tutoriel, nous avons ajouté dans la config UFW la liste des ports
 
 Après avoir ajouté et modifié le fichier de configuration nginx en ajoutant notre nom de domaine il se peut qu'au moment de vouloir relancer le système une erreur survient :
 
-![Fail status NGINX](Readme_Images/fail_systemctl_status_nginx.PNG)
+![Fail status NGINX](Readme_images/fail_systemctl_status_nginx.PNG)
 
 Pour résoudre ce problème et si ``sudo journalctl -xe --unit nginx`` ne fonctionne pas non plus, rien de compliqué il suffit d'arrêter le process ``sudo pkill -f nginx & wait $!`` et de le relancer avec start.
 
-![Success status NGINX](Readme_Images/success_systemctl_status_nginx.PNG)
+![Success status NGINX](Readme_images/success_systemctl_status_nginx.PNG)
 
 ## Bitcoin Daemon
 
@@ -46,11 +46,11 @@ On continue de suivre le tutoriel mais en selectionnant la version *bitcoin-core
 
 En voulant générer les fichiers make avant de build on reçoit l'erreur suivante que l'on peut corriger en installant la librairie **libdb++-dev**.
 
-![Make fatal error](Readme_Images/make_fatal_error.png)
+![Make fatal error](Readme_images/make_fatal_error.png)
 
 En relançant la commande "**make**" on rencontre cette fois encore une erreur :
 
-![Make cannot find ldb_cxx](Readme_Images/make_error_2.png)
+![Make cannot find ldb_cxx](Readme_images/make_error_2.png)
 
 Cette fois le package *db_cxx* n'est pas trouvé, on tente donc de l'installer d'une autre manière.
 
@@ -68,7 +68,7 @@ Cette fois **make** semble aller au bout sans encombre, de même pour "**sudo ma
 
 Toutefois en voulant vérifier que bitcoind s'est bien installé on se retrouve à nouveau confronté à une erreur impliquant une fois encore la librairie *db_cxx*.
 
-![Bitcoind db_cxx error](Readme_Images/bitcoind_version_error.PNG)
+![Bitcoind db_cxx error](Readme_images/bitcoind_version_error.PNG)
 
 ## Install BTC Pay server
 
