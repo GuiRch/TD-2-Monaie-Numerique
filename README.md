@@ -20,6 +20,8 @@
 
 ``sudo apt install libevent-dev libboost-system-dev libboost-filesystem-dev libboost-test-dev libboost-thread-dev libminiupnpc-dev libzmq3-dev``
 
+``sudo apt install apache2 ghostscript libapache2-mod-php mysql-server php php-bcmath php-curl php-imagick php-intl php-json php-mbstring php-mysql php-xml php-zip``
+
 ## Adapt UFW config
 
 En suivant le tutoriel, nous avons ajouté dans la config UFW la liste des ports qui étaient dans le tutoriel enregistré dans `iptable.txt` avec la commande ``ufw allow <port number> comment 'comment'``.
@@ -75,6 +77,14 @@ Toutefois en voulant vérifier que bitcoind s'est bien installé on se retrouve 
 ## Configure your BTC pay server
 
 ## Install website / Wordpress
+
+On commence par installer les dépendances puis il suffit de 3 lignes pour installer wordpress en un instant.
+
+![Wordpress installation](Readme_images/install_wordpress.PNG)
+
+On suit à la lettre les étapes **5.** et **6.** du [tutoriel](https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview), toutefois pour ce qui est de Apache nous allons plutot adapter les configurations pour utiliser NGINX installé plus tôt.
+
+*Note personnel, suivre : https://www.nginx.com/blog/installing-wordpress-with-nginx-unit/*
 
 ## Create a button to pay with tBTC
 
