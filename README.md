@@ -56,7 +56,7 @@ En relançant la commande "**make**" on rencontre cette fois encore une erreur :
 
 Cette fois le package *db_cxx* n'est pas trouvé, on tente donc de l'installer d'une autre manière.
 
-```
+```shell
 wget http://download.oracle.com/berkeley-db/db-4.8.30.zip
 unzip db-4.8.30.zip
 cd db-4.8.30
@@ -73,6 +73,29 @@ Toutefois en voulant vérifier que bitcoind s'est bien installé on se retrouve 
 ![Bitcoind db_cxx error](Readme_images/bitcoind_version_error.PNG)
 
 ## Install BTC Pay server
+
+Pour installer BTCpay server on commence tout d'abord par récupèrer le code source depuis github, code source que l'on clone dans un dossier `source`.
+Puis on lance le script contenu dans le fichier `build.sh`.
+
+```shell
+cd ~/source
+git clone https://github.com/btcpayserver/btcpayserver.git
+cd btcpayserver
+./build.sh
+```
+
+Nous avons décidé de ne pas utiliser postgresql comme porposé dans le tutoriel, mais d'utiliser à la place SQLite qui est la base de donnée utilisée par défaut par BTCPay server, pour une question de simplicité.
+
+On vérifie ensuite que tout fonctionne avec la commande :
+
+```shell
+sudo journalctl -xe --unit btcpay --follow
+```
+
+et on obtient :
+
+![btcpay server running](https://user-images.githubusercontent.com/62909821/135145302-3823d0df-80bb-4ec4-ad2d-2deb64e25310.PNG)
+
 
 ## Configure your BTC pay server
 
