@@ -68,9 +68,9 @@ sudo make install
 
 Cette fois **make** semble aller au bout sans encombre, de même pour "**sudo make install**".
 
-Toutefois en voulant vérifier que bitcoind s'est bien installé on se retrouve à nouveau confronté à une erreur impliquant une fois encore la librairie *db_cxx*.
+On fais tourner bitcoind avec la commande ``bitcoind -testnet -daemon`` et on peut vérifier que les derniers blocs continuent d'être chargés à la date du 29/09/2021 à 15h34.
 
-![Bitcoind db_cxx error](Readme_images/bitcoind_version_error.PNG)
+![Bitcoind running](Readme_images/bitcoind_running.png)
 
 ## Install BTC Pay server
 
@@ -107,7 +107,7 @@ On commence par installer les dépendances puis il suffit de 3 lignes pour insta
 
 On suit à la lettre les étapes **5.** et **6.** du [tutoriel](https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview), toutefois pour ce qui est de Apache nous allons plutot adapter les configurations pour utiliser NGINX installé plus tôt.
 
-*Note personnel, suivre : https://www.nginx.com/blog/installing-wordpress-with-nginx-unit/*
+*Pour cela suivre : https://www.nginx.com/blog/installing-wordpress-with-nginx-unit/*
 
 ## Create a button to pay with tBTC
 
