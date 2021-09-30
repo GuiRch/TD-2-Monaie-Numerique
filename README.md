@@ -107,6 +107,9 @@ On commence par installer les dépendances puis il suffit de 3 lignes pour insta
 
 On suit à la lettre les étapes **5.** et **6.** du [tutoriel](https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview), toutefois pour ce qui est de Apache nous allons plutot adapter les configurations pour utiliser NGINX installé plus tôt.
 
+De ce fait pour installer wordpress avec NGINX nous avons suivi le tutoriel suivant : https://spinupwp.com/hosting-wordpress-yourself-nginx-php-mysql/ .
+Ce tutoriel que nous avons suivi liste les choses à faire pour configurer correctement NGINX avec les dépendances nécéssaires à installer pour que tout fonctionne. Puis explique comment configurer NGINX avec wordpress.
+
 *Pour cela suivre : https://www.nginx.com/blog/installing-wordpress-with-nginx-unit/*
 
 ## Create a button to pay with tBTC
